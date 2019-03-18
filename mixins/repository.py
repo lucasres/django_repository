@@ -4,7 +4,7 @@ class RepositoryMixin():
         model = None
 
     @classmethod
-    def all(cls):
+    def all(cls) -> 'QuerySet<Meta.Model>':
         """
         Shortcut for get all entity from model
         return: QuerySet<Model>
@@ -12,7 +12,7 @@ class RepositoryMixin():
         return cls.Meta.model.objects.all()
     
     @classmethod
-    def get(cls,**kwargs):
+    def get(cls, **kwargs:dict) -> 'Meta.Model':
         """
         Shortcut for get method of model
         return: Model
@@ -20,7 +20,7 @@ class RepositoryMixin():
         return cls.Meta.model.objects.get(**kwargs)
 
     @classmethod
-    def filter(cls, **kwargs):
+    def filter(cls, **kwargs:dict) -> 'QuerySet<Meta.Model>':
         """
         Shortcut for filter method of model
         return: QuerySet<Model>
@@ -28,7 +28,7 @@ class RepositoryMixin():
         return cls.Meta.model.objects.filter(**kwargs)
     
     @classmethod
-    def create(cls,**kwargs):
+    def create(cls, **kwargs:dict) -> 'Meta.Model':
         """
         Shortcut for create method of model
         return: Model

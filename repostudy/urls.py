@@ -16,9 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from product.views import SellProduct, AddStock
+from number.views import Number20
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^product_sell/(?P<pk>\d+)', SellProduct.as_view(),name='sell-product'),
     url(r'^add_stock/(?P<pk>\d+)', AddStock.as_view(),name='add-product'),
+    url(r'^number_validation/(?P<number>\d+)', Number20.as_view(),name='great-number-20'),
 ]
