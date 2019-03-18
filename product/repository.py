@@ -1,7 +1,7 @@
 from product.models import Product
-from dpatterns.repository import RepositoryMixin
+from dpatterns.repository import RepositoryBase
 
-class ProductRepository(RepositoryMixin):
+class ProductRepository(RepositoryBase):
     class Meta:
         model = Product
     

@@ -1,7 +1,7 @@
-from dpatterns.repository import RepositoryMixin
+from dpatterns.repository import RepositoryBase
 from dpatterns.exception import ValidationChainException
 
-class NumberRepository(RepositoryMixin):
+class NumberRepository(RepositoryBase):
     """ Exemplo de cadeia de responsabilidade """
     @classmethod
     def handle_great_20(cls,number:int) -> str:
