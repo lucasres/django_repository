@@ -1,5 +1,5 @@
-from mixins.repository import RepositoryMixin
-from mixins.exception import ValidationChainException
+from dpatterns.repository import RepositoryMixin
+from dpatterns.exception import ValidationChainException
 
 class NumberRepository(RepositoryMixin):
     """ Exemplo de cadeia de responsabilidade """

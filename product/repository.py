@@ -1,5 +1,5 @@
 from product.models import Product
-from mixins.repository import RepositoryMixin
+from dpatterns.repository import RepositoryMixin
 
 class ProductRepository(RepositoryMixin):
     class Meta:
